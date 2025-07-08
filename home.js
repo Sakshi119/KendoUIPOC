@@ -1,6 +1,6 @@
 $(document).ready(function () {
     // Hero Button
-    $("#heroBtn").kendoButton({
+    $(".hero-button").kendoButton({
         themeColor: "primary"
     });
 
@@ -71,8 +71,10 @@ $(document).ready(function () {
     // Calendar (DatePicker)
     $("#featureDate").kendoDatePicker({
         format: "dd MMM yyyy",
-        value: new Date()
+        value: new Date(),
+        min: new Date()
     });
+
 
     // Form Field
     $("#featureName").kendoTextBox({
@@ -148,5 +150,46 @@ $(document).ready(function () {
             $('body').css('overflow', 'auto');
         }
     });
+
+
+    // slider
+    $("#scrollView").kendoScrollView({
+        enablePager: true,
+        contentHeight: "100%"
+    });
+
+    //cardSwiper
+    $("#cardSwiper").kendoScrollView({
+        contentHeight: "auto",
+        enablePager: false
+    });
+
+     const swiper = new Swiper('.cards-swiper', {
+            slidesPerView: 4,
+            spaceBetween: 20,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            autoplay: {
+                delay: 2000,
+            },
+            loop: true,
+            breakpoints: {
+                360:{
+                    slidesPerView: 2,
+                },
+                576:{
+                    slidesPerView: 2,
+                },
+                768: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                }
+
+            }
+     });
 
 });

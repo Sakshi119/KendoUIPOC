@@ -14,6 +14,8 @@
     <!-- Kendo UI Core JS -->
     <script src="https://kendo.cdn.telerik.com/2024.1.319/js/kendo.all.min.js"></script>
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
     <link rel="stylesheet" href="home.css">
 </head>
 
@@ -27,46 +29,68 @@
 
         <div class="navLinks">
             <ul>
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#product">Product</a></li>
-            <li><a href="#subscribe">Subscribe</a></li>
-            <li class="dropdown">
-                <a href="#">More ▾</a>
-                <div class="mega-menu">
-                    <div>
-                        <h4>Components</h4>
-                        <ul>
-                            <li><a href="#features">Grid</a></li>
-                            <li><a href="#features">Chart</a></li>
-                            <li><a href="#features">Calendar</a></li>
-                        </ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#product">Product</a></li>
+                <li><a href="#subscribe">Subscribe</a></li>
+                <li class="dropdown">
+                    <a href="#">More ▾</a>
+                    <div class="mega-menu">
+                        <div>
+                            <h4>Components</h4>
+                            <ul>
+                                <li><a href="#features">Grid</a></li>
+                                <li><a href="#features">Chart</a></li>
+                                <li><a href="#features">Calendar</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>Pages</h4>
+                            <ul>
+                                <li><a href="#product">Product</a></li>
+                                <li><a href="#subscribe">Subscribe</a></li>
+                            </ul>
+                        </div>
                     </div>
-                    <div>
-                        <h4>Pages</h4>
-                        <ul>
-                            <li><a href="#product">Product</a></li>
-                            <li><a href="#subscribe">Subscribe</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </li>
-            <li><button id="themeToggle" class="k-button k-flat toggle-btn">🌙</button></li>
-        </ul>
+                </li>
+                <li><button id="themeToggle" class="k-button k-flat toggle-btn">🌙</button></li>
+            </ul>
         </div>
-        
+
 
         <div class="ham-menu">
-                        <span></span>
-                        <span></span>
-                        <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
 
-                    </div>
+        </div>
     </nav>
     <header id="hero">
-        <h1>Welcome to KendoUI Land 🌐</h1>
-        <p>Fast, elegant, responsive UI — built with jQuery and Kendo UI</p>
-        <button id="heroBtn" class="k-button k-primary hero-button">Get Started</button>
+
+        <div id="scrollView">
+            <div class="scrollView-vertical">
+                <div class="scrollSlide" data-role="page">
+                    <h1>Welcome to KendoUI Land 🌐</h1>
+                    <p>Fast, elegant, responsive UI — built with jQuery and Kendo UI</p>
+                    <button class="k-button k-primary hero-button">Get Started</button>
+                </div>
+                <div class="scrollSlide" data-role="page">
+                    <h1>Welcome to KendoUI Land 🌐</h1>
+                    <p>Fast, elegant, responsive UI — built with jQuery and Kendo UI</p>
+                    <button class="k-button k-primary hero-button">Get Started</button>
+                </div>
+                <div class="scrollSlide" data-role="page">
+                    <h1>Welcome to KendoUI Land 🌐</h1>
+                    <p>Fast, elegant, responsive UI — built with jQuery and Kendo UI</p>
+                    <button class="k-button k-primary hero-button">Get Started</button>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
     </header>
 
     <!-- FEATURES -->
@@ -103,6 +127,8 @@
 
     <!-- PRODUCT PREVIEW -->
     <section id="product" class="product-preview">
+
+
         <img src="https://dummyimage.com/400x300/3f51b5/ffffff&text=Product+UI" alt="Preview">
         <div class="product-info">
             <h2>Build Dashboards in Minutes</h2>
@@ -111,134 +137,225 @@
             <button id="childBtn" class="k-button-solid-primary k-primary">See Demo</button>
         </div>
 
-        <div class="card-wrapper">
-            <div class="k-card">
-                <img class="k-card-img"
-                    src="https://media.istockphoto.com/id/1346294889/photo/web-designing.jpg?s=2048x2048&w=is&k=20&c=Y4vkvOcxErQlwl_K344_XF-1ZfmUyfIXiMSAEiHu78w="
-                    alt="card-img">
-                <div class="k-card-body">
-                    <div class="k-card-title">Card Title</div>
-                    <div class="k-card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, impedit.
+        <div class="swiper-section">
+            <div class="swiper cards-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="k-card">
+                            <img class="k-card-img"
+                                src="https://media.istockphoto.com/id/1346294889/photo/web-designing.jpg?s=2048x2048&w=is&k=20&c=Y4vkvOcxErQlwl_K344_XF-1ZfmUyfIXiMSAEiHu78w="
+                                alt="card-img">
+                            <div class="k-card-body">
+                                <div class="k-card-title">Card Title</div>
+                                <div class="k-card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias,
+                                    impedit.
+                                </div>
+                            </div>
+                            <div class="k-card-footer">
+                                <button class="k-button k-primary actionBtn">Action</button>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="k-card">
+                            <img class="k-card-img"
+                                src="https://media.istockphoto.com/id/1346294889/photo/web-designing.jpg?s=2048x2048&w=is&k=20&c=Y4vkvOcxErQlwl_K344_XF-1ZfmUyfIXiMSAEiHu78w="
+                                alt="card-img">
+                            <div class="k-card-body">
+                                <div class="k-card-title">Card Title</div>
+                                <div class="k-card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias,
+                                    impedit.
+                                </div>
+                            </div>
+                            <div class="k-card-footer">
+                                <button class="k-button k-primary actionBtn">Action</button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="k-card">
+                            <img class="k-card-img"
+                                src="https://media.istockphoto.com/id/1346294889/photo/web-designing.jpg?s=2048x2048&w=is&k=20&c=Y4vkvOcxErQlwl_K344_XF-1ZfmUyfIXiMSAEiHu78w="
+                                alt="card-img">
+                            <div class="k-card-body">
+                                <div class="k-card-title">Card Title</div>
+                                <div class="k-card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias,
+                                    impedit.
+                                </div>
+                            </div>
+                            <div class="k-card-footer">
+                                <button class="k-button k-primary actionBtn">Action</button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="k-card">
+                            <img class="k-card-img"
+                                src="https://media.istockphoto.com/id/1346294889/photo/web-designing.jpg?s=2048x2048&w=is&k=20&c=Y4vkvOcxErQlwl_K344_XF-1ZfmUyfIXiMSAEiHu78w="
+                                alt="card-img">
+                            <div class="k-card-body">
+                                <div class="k-card-title">Card Title</div>
+                                <div class="k-card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias,
+                                    impedit.
+                                </div>
+                            </div>
+                            <div class="k-card-footer">
+                                <button class="k-button k-primary actionBtn">Action</button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="k-card">
+                            <img class="k-card-img"
+                                src="https://media.istockphoto.com/id/1346294889/photo/web-designing.jpg?s=2048x2048&w=is&k=20&c=Y4vkvOcxErQlwl_K344_XF-1ZfmUyfIXiMSAEiHu78w="
+                                alt="card-img">
+                            <div class="k-card-body">
+                                <div class="k-card-title">Card Title</div>
+                                <div class="k-card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias,
+                                    impedit.
+                                </div>
+                            </div>
+                            <div class="k-card-footer">
+                                <button class="k-button k-primary actionBtn">Action</button>
+                            </div>
+
+                        </div>
+                    </div>
+                     <div class="swiper-slide">
+                        <div class="k-card">
+                            <img class="k-card-img"
+                                src="https://media.istockphoto.com/id/1346294889/photo/web-designing.jpg?s=2048x2048&w=is&k=20&c=Y4vkvOcxErQlwl_K344_XF-1ZfmUyfIXiMSAEiHu78w="
+                                alt="card-img">
+                            <div class="k-card-body">
+                                <div class="k-card-title">Card Title</div>
+                                <div class="k-card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias,
+                                    impedit.
+                                </div>
+                            </div>
+                            <div class="k-card-footer">
+                                <button class="k-button k-primary actionBtn">Action</button>
+                            </div>
+
+                        </div>
+                    </div>
+                     <div class="swiper-slide">
+                        <div class="k-card">
+                            <img class="k-card-img"
+                                src="https://media.istockphoto.com/id/1346294889/photo/web-designing.jpg?s=2048x2048&w=is&k=20&c=Y4vkvOcxErQlwl_K344_XF-1ZfmUyfIXiMSAEiHu78w="
+                                alt="card-img">
+                            <div class="k-card-body">
+                                <div class="k-card-title">Card Title</div>
+                                <div class="k-card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias,
+                                    impedit.
+                                </div>
+                            </div>
+                            <div class="k-card-footer">
+                                <button class="k-button k-primary actionBtn">Action</button>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
-                <div class="k-card-footer">
-                    <button class="k-button k-primary actionBtn">Action</button>
-                </div>
-
             </div>
-            <div class="k-card">
-                <img class="k-card-img"
-                    src="https://media.istockphoto.com/id/1346294889/photo/web-designing.jpg?s=2048x2048&w=is&k=20&c=Y4vkvOcxErQlwl_K344_XF-1ZfmUyfIXiMSAEiHu78w="
-                    alt="card-img">
-                <div class="k-card-body">
-                    <div class="k-card-title">Card Title</div>
-                    <div class="k-card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, impedit.
-                    </div>
-                </div>
-                <div class="k-card-footer">
-                    <button class="k-button k-primary actionBtn">Action</button>
-                </div>
 
-            </div>
-            <div class="k-card">
-                <img class="k-card-img"
-                    src="https://media.istockphoto.com/id/1346294889/photo/web-designing.jpg?s=2048x2048&w=is&k=20&c=Y4vkvOcxErQlwl_K344_XF-1ZfmUyfIXiMSAEiHu78w="
-                    alt="card-img">
-                <div class="k-card-body">
-                    <div class="k-card-title">Card Title</div>
-                    <div class="k-card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, impedit.
-                    </div>
-                </div>
-                <div class="k-card-footer">
-                    <button class="k-button k-primary actionBtn">Action</button>
-                </div>
-
-            </div>
-            <div class="k-card">
-                <img class="k-card-img"
-                    src="https://media.istockphoto.com/id/1346294889/photo/web-designing.jpg?s=2048x2048&w=is&k=20&c=Y4vkvOcxErQlwl_K344_XF-1ZfmUyfIXiMSAEiHu78w="
-                    alt="card-img">
-                <div class="k-card-body">
-                    <div class="k-card-title">Card Title</div>
-                    <div class="k-card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, impedit.
-                    </div>
-                </div>
-                <div class="k-card-footer">
-                    <button class="k-button k-primary actionBtn">Action</button>
-                </div>
-
-            </div>
-            <div class="k-card">
-                <img class="k-card-img"
-                    src="https://media.istockphoto.com/id/1346294889/photo/web-designing.jpg?s=2048x2048&w=is&k=20&c=Y4vkvOcxErQlwl_K344_XF-1ZfmUyfIXiMSAEiHu78w="
-                    alt="card-img">
-                <div class="k-card-body">
-                    <div class="k-card-title">Card Title</div>
-                    <div class="k-card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, impedit.
-                    </div>
-                </div>
-                <div class="k-card-footer">
-                    <button class="k-button k-primary actionBtn">Action</button>
-                </div>
-
-            </div>
-            <div class="k-card">
-                <img class="k-card-img"
-                    src="https://media.istockphoto.com/id/1346294889/photo/web-designing.jpg?s=2048x2048&w=is&k=20&c=Y4vkvOcxErQlwl_K344_XF-1ZfmUyfIXiMSAEiHu78w="
-                    alt="card-img">
-                <div class="k-card-body">
-                    <div class="k-card-title">Card Title</div>
-                    <div class="k-card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, impedit.
-                    </div>
-                </div>
-                <div class="k-card-footer">
-                    <button class="k-button k-primary actionBtn">Action</button>
-                </div>
-
-            </div>
-            <div class="k-card">
-                <img class="k-card-img"
-                    src="https://media.istockphoto.com/id/1346294889/photo/web-designing.jpg?s=2048x2048&w=is&k=20&c=Y4vkvOcxErQlwl_K344_XF-1ZfmUyfIXiMSAEiHu78w="
-                    alt="card-img">
-                <div class="k-card-body">
-                    <div class="k-card-title">Card Title</div>
-                    <div class="k-card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, impedit.
-                    </div>
-                </div>
-                <div class="k-card-footer">
-                    <button class="k-button k-primary actionBtn">Action</button>
-                </div>
-
-            </div>
-            <div class="k-card">
-                <img class="k-card-img"
-                    src="https://media.istockphoto.com/id/1346294889/photo/web-designing.jpg?s=2048x2048&w=is&k=20&c=Y4vkvOcxErQlwl_K344_XF-1ZfmUyfIXiMSAEiHu78w="
-                    alt="card-img">
-                <div class="k-card-body">
-                    <div class="k-card-title">Card Title</div>
-                    <div class="k-card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, impedit.
-                    </div>
-                </div>
-                <div class="k-card-footer">
-                    <button class="k-button k-primary actionBtn">Action</button>
-                </div>
-
-            </div>
-            <div class="k-card">
-                <img class="k-card-img"
-                    src="https://media.istockphoto.com/id/1346294889/photo/web-designing.jpg?s=2048x2048&w=is&k=20&c=Y4vkvOcxErQlwl_K344_XF-1ZfmUyfIXiMSAEiHu78w="
-                    alt="card-img">
-                <div class="k-card-body">
-                    <div class="k-card-title">Card Title</div>
-                    <div class="k-card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, impedit.
-                    </div>
-                </div>
-                <div class="k-card-footer">
-                    <button class="k-button k-primary actionBtn">Action</button>
-                </div>
-
-            </div>
         </div>
+        <!-- <div class="card-wrapper">
+            <div class="k-card">
+                <img class="k-card-img"
+                    src="https://media.istockphoto.com/id/1346294889/photo/web-designing.jpg?s=2048x2048&w=is&k=20&c=Y4vkvOcxErQlwl_K344_XF-1ZfmUyfIXiMSAEiHu78w="
+                    alt="card-img">
+                <div class="k-card-body">
+                    <div class="k-card-title">Card Title</div>
+                    <div class="k-card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, impedit.
+                    </div>
+                </div>
+                <div class="k-card-footer">
+                    <button class="k-button k-primary actionBtn">Action</button>
+                </div>
+
+            </div>
+            <div class="k-card">
+                <img class="k-card-img"
+                    src="https://media.istockphoto.com/id/1346294889/photo/web-designing.jpg?s=2048x2048&w=is&k=20&c=Y4vkvOcxErQlwl_K344_XF-1ZfmUyfIXiMSAEiHu78w="
+                    alt="card-img">
+                <div class="k-card-body">
+                    <div class="k-card-title">Card Title</div>
+                    <div class="k-card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, impedit.
+                    </div>
+                </div>
+                <div class="k-card-footer">
+                    <button class="k-button k-primary actionBtn">Action</button>
+                </div>
+
+            </div>
+            <div class="k-card">
+                <img class="k-card-img"
+                    src="https://media.istockphoto.com/id/1346294889/photo/web-designing.jpg?s=2048x2048&w=is&k=20&c=Y4vkvOcxErQlwl_K344_XF-1ZfmUyfIXiMSAEiHu78w="
+                    alt="card-img">
+                <div class="k-card-body">
+                    <div class="k-card-title">Card Title</div>
+                    <div class="k-card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, impedit.
+                    </div>
+                </div>
+                <div class="k-card-footer">
+                    <button class="k-button k-primary actionBtn">Action</button>
+                </div>
+
+            </div>
+            <div class="k-card">
+                <img class="k-card-img"
+                    src="https://media.istockphoto.com/id/1346294889/photo/web-designing.jpg?s=2048x2048&w=is&k=20&c=Y4vkvOcxErQlwl_K344_XF-1ZfmUyfIXiMSAEiHu78w="
+                    alt="card-img">
+                <div class="k-card-body">
+                    <div class="k-card-title">Card Title</div>
+                    <div class="k-card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, impedit.
+                    </div>
+                </div>
+                <div class="k-card-footer">
+                    <button class="k-button k-primary actionBtn">Action</button>
+                </div>
+
+            </div>
+            <div class="k-card">
+                <img class="k-card-img"
+                    src="https://media.istockphoto.com/id/1346294889/photo/web-designing.jpg?s=2048x2048&w=is&k=20&c=Y4vkvOcxErQlwl_K344_XF-1ZfmUyfIXiMSAEiHu78w="
+                    alt="card-img">
+                <div class="k-card-body">
+                    <div class="k-card-title">Card Title</div>
+                    <div class="k-card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, impedit.
+                    </div>
+                </div>
+                <div class="k-card-footer">
+                    <button class="k-button k-primary actionBtn">Action</button>
+                </div>
+
+            </div>
+            <div class="k-card">
+                <img class="k-card-img"
+                    src="https://media.istockphoto.com/id/1346294889/photo/web-designing.jpg?s=2048x2048&w=is&k=20&c=Y4vkvOcxErQlwl_K344_XF-1ZfmUyfIXiMSAEiHu78w="
+                    alt="card-img">
+                <div class="k-card-body">
+                    <div class="k-card-title">Card Title</div>
+                    <div class="k-card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, impedit.
+                    </div>
+                </div>
+                <div class="k-card-footer">
+                    <button class="k-button k-primary actionBtn">Action</button>
+                </div>
+
+            </div>
+
+
+
+        </div> -->
+
+
+
 
 
 
@@ -260,6 +377,7 @@
         &copy; 2025 KendoUI Land. All rights reserved.
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script type="text/javascript" src="home.js"></script>
 </body>
 
