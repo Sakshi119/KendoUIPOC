@@ -20,6 +20,7 @@
 </head>
 
 <body>
+
     <!-- HERO -->
     <nav class="main-nav">
         <div class="logo">
@@ -29,40 +30,45 @@
 
         <div class="navLinks">
             <ul>
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#product">Product</a></li>
-                <li><a href="#subscribe">Subscribe</a></li>
-                <li class="dropdown">
-                    <a href="#">More ▾</a>
-                    <div class="mega-menu">
-                        <div>
-                            <h4>Components</h4>
-                            <ul>
-                                <li><a href="#features">Grid</a></li>
-                                <li><a href="#features">Chart</a></li>
-                                <li><a href="#features">Calendar</a></li>
-                            </ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#product">Product</a></li>
+                    <li><a href="#subscribe">Subscribe</a></li>
+                    <li class="dropdown">
+                        <a href="#">More ▾</a>
+                        <div class="mega-menu">
+                            <div>
+                                <h4>Components</h4>
+                                <ul>
+                                    <li><a href="#features">Grid</a></li>
+                                    <li><a href="#features">Chart</a></li>
+                                    <li><a href="#features">Calendar</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4>Pages</h4>
+                                <ul>
+                                    <li><a href="#product">Product</a></li>
+                                    <li><a href="#subscribe">Subscribe</a></li>
+                                </ul>
+                            </div>
                         </div>
-                        <div>
-                            <h4>Pages</h4>
-                            <ul>
-                                <li><a href="#product">Product</a></li>
-                                <li><a href="#subscribe">Subscribe</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </li>
-                <li><button id="themeToggle" class="k-button k-flat toggle-btn">🌙</button></li>
-            </ul>
+                    </li>
+                    <li><button id="themeToggle" class="k-button k-flat toggle-btn">🌙</button></li>
+                </ul>
         </div>
+
 
 
         <div class="ham-menu">
             <span></span>
             <span></span>
             <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
 
+        </div>
         </div>
     </nav>
     <header id="hero">
@@ -92,6 +98,13 @@
 
 
     </header>
+
+    <!-- Search -->
+
+    <section class="search-bar-wrapper" style="padding: 24px 0 0 0; text-align: center;">
+        <input id="sectionSearch" class="k-textbox" placeholder="Search sections..." />
+        <span class="k-input-icon k-icon k-i-search"></span>
+    </section>
 
     <!-- FEATURES -->
     <section id="features">
@@ -367,15 +380,113 @@
         <div class="subscribe">
             <h2>Stay in the Loop</h2>
             <p>Subscribe for updates, tips, and tutorials.</p>
-            <input id="emailInput" />
-            <button id="subscribeBtn" class="k-button k-primary">Subscribe</button>
+            <div class="subscribe-input">
+                <input id="emailInput" />
+                <button id="subscribeBtn" class="k-button k-primary">Subscribe</button>
+            </div>
         </div>
     </section>
+
+
+    <!-- REACH OUT FORM -->
+    <section id="reachout">
+        <h2>Reach Out</h2>
+        <form id="reachoutForm" novalidate>
+            <div class="form-field">
+                <label for="roName">Name</label>
+                <input id="roName" name="name" />
+                <span class="k-invalid-msg" data-for="roName"></span>
+            </div>
+            <div class="form-field">
+                <label for="roEmail">Email <span>*</span></label>
+                <input id="roEmail" name="email" />
+                <span class="k-invalid-msg" data-for="roEmail"></span>
+            </div>
+            <div class="form-field">
+                <label for="roMobile">Mobile Number <span>*</span></label>
+                <input id="roMobile" name="mobile" />
+                <span class="k-invalid-msg" data-for="roMobile"></span>
+            </div>
+            <div class="form-field">
+                <label for="roBirthdate">Birthdate</label>
+                <input id="roBirthdate" name="birthdate" />
+                <span class="k-invalid-msg" data-for="roBirthdate"></span>
+            </div>
+            <div class="form-field">
+                <label>Gender</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="gender" value="Male" checked> Male</label>
+                    <label><input type="radio" name="gender" value="Female"> Female</label>
+                    <label><input type="radio" name="gender" value="Other"> Other</label>
+                </div>
+            </div>
+            <button id="roSubmit" class="k-button k-primary" type="submit">Submit</button>
+        </form>
+    </section>
+
+    <!-- Add this section just above the FAQ section or wherever you want the tabs to appear -->
+    <section id="tabs-demo" style="max-width:600px;margin:48px auto;">
+        <h2 style="text-align:center;">Explore More</h2>
+        <div id="mainTabs">
+            <ul>
+                <li class="k-active">Overview</li>
+                <li>Features</li>
+                <li>Pricing</li>
+            </ul>
+            <div>
+                <p>
+                    Kendo UI is a modern UI library for building responsive web applications quickly and efficiently.
+                </p>
+            </div>
+            <div>
+                <ul>
+                    <li>Rich set of widgets</li>
+                    <li>Easy data binding</li>
+                    <li>Responsive design</li>
+                </ul>
+            </div>
+            <div>
+                <p>
+                    Kendo UI Core: Free<br>
+                    Kendo UI Professional: Requires commercial license
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" style="max-width:600px;margin:48px auto;">
+        <h2 style="text-align:center;">Frequently Asked Questions</h2>
+        <div id="faqAccordion">
+            <h3>What is Kendo UI?</h3>
+            <div>
+                <p>Kendo UI is a professional UI library for building modern web apps with jQuery, offering a wide range
+                    of widgets and tools.</p>
+            </div>
+            <h3>Can I use Kendo UI for free?</h3>
+            <div>
+                <p>Kendo UI Core is open source and free. For advanced features and support, a commercial license is
+                    required.</p>
+            </div>
+            <h3>How do I get started?</h3>
+            <div>
+                <p>Check the official documentation, explore demos, and use CDN links to quickly add Kendo UI to your
+                    project.</p>
+            </div>
+            <h3>Does Kendo UI support responsive design?</h3>
+            <div>
+                <p>Yes, Kendo UI components are responsive and adapt to different screen sizes out of the box.</p>
+            </div>
+        </div>
+    </section>
+
 
     <!-- FOOTER -->
     <footer id="footer">
         &copy; 2025 KendoUI Land. All rights reserved.
     </footer>
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script type="text/javascript" src="home.js"></script>

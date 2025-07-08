@@ -32,13 +32,18 @@ header {
 .toggle-btn {
     border: none;
     font-size: 30px;
+    margin-top:0 !important;
 }
 
 .card,
 .feature-box,
 .subscribe {
-    background-color: var(--card-bg);
+    background-color: #e9ebff;
     transition: background 0.3s;
+}
+
+button#subscribeBtn {
+    padding: 10px !important;
 }
 
 header h1 {
@@ -60,7 +65,7 @@ header p {
 }
 
 section {
-    padding: 60px 20px;
+    padding: 40px 20px;
     max-width: 1200px;
     margin: auto;
 }
@@ -103,11 +108,37 @@ section {
     border-radius: 10px;
 }
 
+/* search */
+.search-bar-wrapper input {
+    width: 100% !important;
+    border: none;
+}
+
+#faqAccordion > div {
+    display: none;
+}
+
+.search-bar-wrapper input {
+    border-radius: 8px;
+    border: 1px solid #d0d0f5;
+    max-width: 100% !important;
+    background: #e9ebff;
+}
+
 .subscribe {
-    background: #f1f3f7;
+    background: #e9ebff;
     padding: 40px;
     border-radius: 10px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.error {
+    text-align: left;
+    margin-top: 10px !important;
+    position: relative;
 }
 
 footer {
@@ -115,7 +146,6 @@ footer {
     padding: 30px;
     background: #3f51b5;
     color: white;
-    margin-top: 40px;
 }
 
 .subscribe .k-input {
@@ -381,7 +411,82 @@ footer {
 }
 
 
+/* css edited by pankaj */
+.k-button{
+    margin-top: 5px;
+}
 
+/* reachout */
+
+#reachout {
+    max-width: 100%;
+    background-color: #e9ebff;
+    transition: background 0.3s;
+    padding: 40px 0 60px;
+}
+
+#reachout h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.8em;
+    color: var(--text);
+}
+
+#reachout .form-field {
+    margin-bottom: 18px;
+}
+
+#reachout label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: var(--text);
+}
+
+form#reachoutForm {
+    max-width: 500px;
+    margin: auto;
+}
+
+#reachout input[type="text"],
+#reachout input[type="email"],
+#reachout input[type="tel"],
+#reachout input[type="date"],
+#reachout input[type="number"],
+#reachout input:not([type="radio"]) {
+    width: 100%;
+}
+
+#reachout .radio-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 6px;
+}
+
+#reachout .radio-group label {
+    font-weight: normal;
+    color: var(--text);
+}
+
+#roSubmit {
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px 0;
+    font-size: 1em;
+}
+
+.k-input-inner {
+    padding: 10px !important;
+    border-radius: 8px;
+}
+
+.form-field label span {
+    color: red;
+}
+/* pop up css  */
+#popup{
+    padding: 10px 15px;    
+}
 
 @media(max-width: 575px) {
     .navLinks {
@@ -524,6 +629,8 @@ footer {
     .k-card {
         width: 100%;
     }
+
+    .product-preview img {
 
     .product-preview img {
         width: 100%;

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Kendo Dashboard</title>
+
+    <!-- Kendo UI Core CSS -->
+    <link href="https://kendo.cdn.telerik.com/themes/11.0.2/default/default-main.css" rel="stylesheet" />
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- Kendo UI Core JS -->
+    <script src="https://kendo.cdn.telerik.com/2024.1.319/js/kendo.all.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="home.css">
+
+</head>
+
+<body>
+    <h2>Modern Kendo Dashboard (Step 1)</h2>
+
+    <div class="dashboard">
+
+        <div id="popup">This is a Kendo Popup from Kendo UI</div>
+
+        <!-- Button Card -->
+        <div class="card">
+            <h3>Kendo Button</h3>
+            <button id="myButton">Click Me</button><br>
+            <button class="k-button k-button-sm" id="primary-sm">Primary Small button</button><br>
+            <button class="k-button k-button-md " id="secondary-md">Medium button</button><br>
+            <button class="k-button k-button-lg " id="tertiary-lg">Large button</button><br>
+            <button class="k-button k-button-lg " id="info-btn">Info Theme button</button><br>
+            <button class="k-button k-button-lg " id="warning-btn">Warning Theme button</button><br>
+            <button class="k-button k-button-lg " id="pop-up-btn">Click Here to see the pop up</button><br> 
+        </div>
+
+        <!-- Grid Card -->
+        <div class="card">
+            <h3>Data Grid</h3>
+            <div id="myGrid"></div>
+        </div>
+
+        <!-- Chart Card -->
+        <div class="card">
+            <h3>Sales Chart</h3>
+            <div id="myChart"></div>
+        </div>
+
+        <!-- line chart -->
+        <div class="card">
+            <h3>Line Chart</h3>
+            <div id="chart"></div>
+        </div>
+
+        <!-- pie chart  -->
+        <div class="card">
+            <h3>Pie Chart</h3>
+            <div id="pieChart"></div>
+        </div>
+
+        <!-- Dropdown Card -->
+        <div class="card">
+            <h3>Select Category</h3>
+            <select id="categorySelector"></select>
+        </div>
+
+        <!-- multiselect  -->
+        <div class="card">
+            <h3>Multi Select</h3>
+            <select id="products"></select>
+        </div>
+
+        <!-- Date Picker -->
+        <div class="card">
+            <h3>Pick a Date</h3>
+            <input id="datePicker" />
+        </div>
+
+        <div class="card">
+            <h3>DateTime Picker</h3>
+            <input id="datetimepicker" />
+        </div>
+
+
+        <!-- Radial Gauge -->
+        <div class="card">
+            <h3>Performance Meter</h3>
+            <div id="radialGauge" style="height: 180px;"></div>
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="components.js"></script>
+</body>
+
+</html>
