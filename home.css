@@ -1,0 +1,489 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #ffffff;
+    --text: #222;
+    --card-bg: #ffffff;
+}
+
+[data-theme='dark'] {
+    --bg: #121212;
+    --text: #f0f0f0;
+    --card-bg: #1e1e1e;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    transition: background 0.3s, color 0.3s;
+    margin: 0;
+}
+
+header {
+    background: #3f51b5;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.toggle-btn {
+    border: none;
+    font-size: 30px;
+}
+
+.card,
+.feature-box,
+.subscribe {
+    background-color: var(--card-bg);
+    transition: background 0.3s;
+}
+
+header h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.hero-button {
+    font-size: 1.1em;
+}
+
+section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.feature-box {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.feature-box h4 {
+    margin-top: 15px;
+}
+
+[data-theme='dark'] .feature-box h4,
+[data-theme='dark'] .feature-box p,
+[data-theme='dark'] .subscribe {
+    color: #222;
+}
+
+.product-preview {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
+}
+
+.product-preview img {
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+.subscribe {
+    background: #f1f3f7;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #3f51b5;
+    color: white;
+    margin-top: 40px;
+}
+
+.subscribe .k-input {
+    width: 200px;
+}
+
+.k-grid-pager {
+    margin: auto;
+    width: 100%;
+}
+
+.k-pager-numbers-wrap {
+    width: 100%;
+    justify-content: space-around;
+}
+
+.calendars-forms {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+
+.main-nav {
+    position: sticky;
+    top: 0;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    z-index: 999;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.main-nav a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #3f51b5;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background 0.2s;
+}
+
+.main-nav a:hover {
+    background: #f1f3f7;
+}
+
+.main-nav .dropdown {
+    position: relative;
+}
+
+/* Mega Menu */
+.mega-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    border-radius: 10px;
+    padding: 25px 30px;
+    min-width: 400px;
+    box-shadow: 0 8px 24px rgb(0 0 0 / 16%);
+    z-index: 999;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.dropdown:hover .mega-menu {
+    display: flex;
+}
+
+/* Titles in Mega Menu */
+.mega-menu h4 {
+    font-size: 1.1em;
+    margin-bottom: 12px;
+    color: #3f51b5;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 6px;
+}
+
+/* Links inside Mega Menu */
+.mega-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mega-menu li {
+    margin-bottom: 8px;
+}
+
+.mega-menu a {
+    text-decoration: none;
+    font-size: 0.95em;
+    color: #333;
+    transition: color 0.2s ease;
+}
+
+.mega-menu a:hover {
+    color: #3f51b5;
+}
+
+
+
+.product-preview {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
+    flex-direction: row;
+}
+
+.product-preview .product-info {
+    width: 50%;
+
+}
+
+.main-nav a.active {
+    background: #3f51b5;
+    color: white;
+}
+
+.logo-grp {
+    font-size: 30px;
+}
+
+
+
+/* -------cards---------- */
+.card-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 20px;
+}
+
+.k-card {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    width: 32.18%;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    transition: transform 0.3s ease;
+}
+
+/* .k-card:hover {
+  transform: translateY(-5px);
+} */
+
+.k-card-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.k-card-body {
+    padding: 16px;
+}
+
+.k-card-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.k-card-text {
+    font-size: 16px;
+    color: #666;
+}
+
+.k-card-footer {
+    padding: 16px;
+    text-align: right;
+    border-top: 1px solid #eee;
+}
+
+
+.ham-menu {
+    display: none;
+    cursor: pointer;
+    width: 24px;
+    position: relative;
+}
+
+.ham-menu span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: #121212;
+    margin: 3px 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.ham-menu.active span:nth-child(1) {
+    width: 25px;
+    transform: rotate(45deg) translate(5px, 6px);
+}
+
+.ham-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.ham-menu.active span:nth-child(3) {
+    width: 25px;
+    transform: rotate(-45deg) translate(6px, -7px);
+}
+
+
+
+@media(max-width: 575px){
+    .navLinks {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 100%;
+        background: rgba(63, 81, 181, 0.77);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(7.9px);
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 80px 24px 24px 24px;
+        transition: right 0.3s ease;
+        z-index: 1000;
+    }
+
+    .navLinks.active {
+        right: 0;
+    }
+
+    .navLinks.active body {
+        overflow: hidden;
+    }
+
+    .ham-menu.active  span{
+        background-color: #fff;
+    }
+
+
+    .navLinks ul {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .ham-menu {
+        z-index: 1100;
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .main-nav {
+        position: relative;
+    }
+
+    .navLinks ul li {
+        padding: 15px 0;
+
+    }
+
+    .navLinks ul li a {
+        color: #fff;
+        font-size: 22px;
+    }
+
+     .card-wrapper{
+        justify-content: center;
+    }
+    .k-card{
+        width: 100%;
+    }
+    .product-preview img{
+        width: 100%;
+    }
+    
+
+}
+
+
+@media(min-width: 576px) and (max-width: 767px) {
+    .navLinks {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 100%;
+        background: rgba(63, 81, 181, 0.77);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(7.9px);
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 80px 24px 24px 24px;
+        transition: right 0.3s ease;
+        z-index: 1000;
+    }
+
+    .navLinks.active {
+        right: 0;
+    }
+
+    .navLinks.active body {
+        overflow: hidden;
+    }
+
+    .ham-menu.active  span{
+        background-color: #fff;
+    }
+
+
+    .navLinks ul {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .ham-menu {
+        z-index: 1100;
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .main-nav {
+        position: relative;
+    }
+
+    .navLinks ul li {
+        padding: 15px 0;
+
+    }
+
+    .navLinks ul li a {
+        color: #fff;
+        font-size: 22px;
+    }
+    .card-wrapper{
+        justify-content: center;
+    }
+
+    .k-card{
+        width: 48%;
+    }
+    .product-preview img{
+        width: 100%;
+    }
+
+    
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .k-card{
+        width: 31.45%;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .k-card{
+        width: 31.85%;
+    }
+}

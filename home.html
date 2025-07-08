@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home page</title>
+    <!-- Kendo UI Core CSS -->
+    <link href="https://kendo.cdn.telerik.com/themes/11.0.2/default/default-main.css" rel="stylesheet" />
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- Kendo UI Core JS -->
+    <script src="https://kendo.cdn.telerik.com/2024.1.319/js/kendo.all.min.js"></script>
+
+    <link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+    <!-- HERO -->
+    <nav class="main-nav">
+        <div class="logo">
+            <a href="" class="logo-grp"> KendoUI
+            </a>
+        </div>
+
+        <div class="navLinks">
+            <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#product">Product</a></li>
+            <li><a href="#subscribe">Subscribe</a></li>
+            <li class="dropdown">
+                <a href="#">More ▾</a>
+                <div class="mega-menu">
+                    <div>
+                        <h4>Components</h4>
+                        <ul>
+                            <li><a href="#features">Grid</a></li>
+                            <li><a href="#features">Chart</a></li>
+                            <li><a href="#features">Calendar</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Pages</h4>
+                        <ul>
+                            <li><a href="#product">Product</a></li>
+                            <li><a href="#subscribe">Subscribe</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li><button id="themeToggle" class="k-button k-flat toggle-btn">🌙</button></li>
+        </ul>
+        </div>
+        
+
+        <div class="ham-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                    </div>
+    </nav>
+    <header id="hero">
+        <h1>Welcome to KendoUI Land 🌐</h1>
+        <p>Fast, elegant, responsive UI — built with jQuery and Kendo UI</p>
+        <button id="heroBtn" class="k-button k-primary hero-button">Get Started</button>
+    </header>
+
+    <!-- FEATURES -->
+    <section id="features">
+        <h2 style="text-align:center;">Features</h2>
+        <div class="features">
+            <div class="feature-box">
+                <!-- <span class="k-icon k-i-chart-bar" style="font-size:40px;"></span> -->
+                <h4>Rich Charts</h4>
+                <div id="featureChart" style="height: 200px;"></div>
+
+                <p>Interactive charts with just a few lines of code.</p>
+            </div>
+            <div class="feature-box">
+                <!-- <span class="k-icon k-i-grid" style="font-size:40px;"></span> -->
+                <h4>Data Grids</h4>
+                <div id="featureGrid" style="height: 200px;"></div>
+
+                <p>Sortable, filterable, paginated data tables.</p>
+            </div>
+            <div class="feature-box">
+                <h4>Calendars & Forms</h4>
+                <div class="calendars-forms">
+                    <p style="margin-bottom: 10px;text-align: left;">Select Date:</p>
+                    <input id="featureDate" style="width: 100%;" />
+                    <p style="margin: 15px 0 10px;text-align: left;">Your Name:</p>
+                    <input id="featureName" style="width: 100%;" />
+                    <button id="formSubmitBtn" class="k-button k-primary" style="margin-top: 10px;">Submit</button>
+                    <p>Form and button data binding.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCT PREVIEW -->
+    <section id="product" class="product-preview">
+        <img src="https://dummyimage.com/400x300/3f51b5/ffffff&text=Product+UI" alt="Preview">
+        <div class="product-info">
+            <h2>Build Dashboards in Minutes</h2>
+            <p>Drag, drop, and connect components like grids, charts, and buttons with ease using Kendo UI’s powerful
+                tools.</p>
+            <button id="childBtn" class="k-button-solid-primary k-primary">See Demo</button>
+        </div>
+
+        <div class="card-wrapper">
+            <div class="k-card">
+                <img class="k-card-img"
+                    src="https://media.istockphoto.com/id/1346294889/photo/web-designing.jpg?s=2048x2048&w=is&k=20&c=Y4vkvOcxErQlwl_K344_XF-1ZfmUyfIXiMSAEiHu78w="
+                    alt="card-img">
+                <div class="k-card-body">
+                    <div class="k-card-title">Card Title</div>
+                    <div class="k-card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, impedit.
+                    </div>
+                </div>
+                <div class="k-card-footer">
+                    <button class="k-button k-primary actionBtn">Action</button>
+                </div>
+
+            </div>
+            <div class="k-card">
+                <img class="k-card-img"
+                    src="https://media.istockphoto.com/id/1346294889/photo/web-designing.jpg?s=2048x2048&w=is&k=20&c=Y4vkvOcxErQlwl_K344_XF-1ZfmUyfIXiMSAEiHu78w="
+                    alt="card-img">
+                <div class="k-card-body">
+                    <div class="k-card-title">Card Title</div>
+                    <div class="k-card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, impedit.
+                    </div>
+                </div>
+                <div class="k-card-footer">
+                    <button class="k-button k-primary actionBtn">Action</button>
+                </div>
+
+            </div>
+            <div class="k-card">
+                <img class="k-card-img"
+                    src="https://media.istockphoto.com/id/1346294889/photo/web-designing.jpg?s=2048x2048&w=is&k=20&c=Y4vkvOcxErQlwl_K344_XF-1ZfmUyfIXiMSAEiHu78w="
+                    alt="card-img">
+                <div class="k-card-body">
+                    <div class="k-card-title">Card Title</div>
+                    <div class="k-card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, impedit.
+                    </div>
+                </div>
+                <div class="k-card-footer">
+                    <button class="k-button k-primary actionBtn">Action</button>
+                </div>
+
+            </div>
+            <div class="k-card">
+                <img class="k-card-img"
+                    src="https://media.istockphoto.com/id/1346294889/photo/web-designing.jpg?s=2048x2048&w=is&k=20&c=Y4vkvOcxErQlwl_K344_XF-1ZfmUyfIXiMSAEiHu78w="
+                    alt="card-img">
+                <div class="k-card-body">
+                    <div class="k-card-title">Card Title</div>
+                    <div class="k-card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, impedit.
+                    </div>
+                </div>
+                <div class="k-card-footer">
+                    <button class="k-button k-primary actionBtn">Action</button>
+                </div>
+
+            </div>
+            <div class="k-card">
+                <img class="k-card-img"
+                    src="https://media.istockphoto.com/id/1346294889/photo/web-designing.jpg?s=2048x2048&w=is&k=20&c=Y4vkvOcxErQlwl_K344_XF-1ZfmUyfIXiMSAEiHu78w="
+                    alt="card-img">
+                <div class="k-card-body">
+                    <div class="k-card-title">Card Title</div>
+                    <div class="k-card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, impedit.
+                    </div>
+                </div>
+                <div class="k-card-footer">
+                    <button class="k-button k-primary actionBtn">Action</button>
+                </div>
+
+            </div>
+            <div class="k-card">
+                <img class="k-card-img"
+                    src="https://media.istockphoto.com/id/1346294889/photo/web-designing.jpg?s=2048x2048&w=is&k=20&c=Y4vkvOcxErQlwl_K344_XF-1ZfmUyfIXiMSAEiHu78w="
+                    alt="card-img">
+                <div class="k-card-body">
+                    <div class="k-card-title">Card Title</div>
+                    <div class="k-card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, impedit.
+                    </div>
+                </div>
+                <div class="k-card-footer">
+                    <button class="k-button k-primary actionBtn">Action</button>
+                </div>
+
+            </div>
+            <div class="k-card">
+                <img class="k-card-img"
+                    src="https://media.istockphoto.com/id/1346294889/photo/web-designing.jpg?s=2048x2048&w=is&k=20&c=Y4vkvOcxErQlwl_K344_XF-1ZfmUyfIXiMSAEiHu78w="
+                    alt="card-img">
+                <div class="k-card-body">
+                    <div class="k-card-title">Card Title</div>
+                    <div class="k-card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, impedit.
+                    </div>
+                </div>
+                <div class="k-card-footer">
+                    <button class="k-button k-primary actionBtn">Action</button>
+                </div>
+
+            </div>
+            <div class="k-card">
+                <img class="k-card-img"
+                    src="https://media.istockphoto.com/id/1346294889/photo/web-designing.jpg?s=2048x2048&w=is&k=20&c=Y4vkvOcxErQlwl_K344_XF-1ZfmUyfIXiMSAEiHu78w="
+                    alt="card-img">
+                <div class="k-card-body">
+                    <div class="k-card-title">Card Title</div>
+                    <div class="k-card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, impedit.
+                    </div>
+                </div>
+                <div class="k-card-footer">
+                    <button class="k-button k-primary actionBtn">Action</button>
+                </div>
+
+            </div>
+            <div class="k-card">
+                <img class="k-card-img"
+                    src="https://media.istockphoto.com/id/1346294889/photo/web-designing.jpg?s=2048x2048&w=is&k=20&c=Y4vkvOcxErQlwl_K344_XF-1ZfmUyfIXiMSAEiHu78w="
+                    alt="card-img">
+                <div class="k-card-body">
+                    <div class="k-card-title">Card Title</div>
+                    <div class="k-card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, impedit.
+                    </div>
+                </div>
+                <div class="k-card-footer">
+                    <button class="k-button k-primary actionBtn">Action</button>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+    </section>
+
+    <!-- SUBSCRIBE -->
+    <section id="subscribe">
+        <div class="subscribe">
+            <h2>Stay in the Loop</h2>
+            <p>Subscribe for updates, tips, and tutorials.</p>
+            <input id="emailInput" />
+            <button id="subscribeBtn" class="k-button k-primary">Subscribe</button>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="footer">
+        &copy; 2025 KendoUI Land. All rights reserved.
+    </footer>
+
+    <script type="text/javascript" src="home.js"></script>
+</body>
+
+</html>
