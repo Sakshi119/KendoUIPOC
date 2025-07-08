@@ -50,7 +50,4 @@ A responsive, interactive landing page built with **Kendo UI Core**, **Swiper.js
 - Kendo UI **Professional Edition** requires a commercial license.
 - Image assets used (e.g., from dummyimage.com or iStock) are for **demonstration purposes only**.
 
----
-
-## 🗂️ Folder Structure
 
