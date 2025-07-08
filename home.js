@@ -123,6 +123,7 @@ $(document).ready(function () {
         const isDark = $("body").attr("data-theme") === "dark";
         $("body").attr("data-theme", isDark ? "light" : "dark");
         $(this).text(isDark ? "🌙" : "☀️");
+        
     });
 
     // ------------------- Smooth Scroll & Scroll Spy -------------------
@@ -186,6 +187,13 @@ $(document).ready(function () {
             }
         }
     });
+
+
+
+    $(window).resize(function () {
+        location.reload();
+    });
+
 
 
     // ------------------- Reach Out Form -------------------
