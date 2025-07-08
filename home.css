@@ -353,6 +353,10 @@ footer {
     transform: rotate(-45deg) translate(6px, -7px);
 }
 
+/* css edited by pankaj */
+.k-button{
+    margin-top: 5px;
+}
 
 /* reachout */
 
@@ -420,6 +424,10 @@ form#reachoutForm {
 
 .form-field label span {
     color: red;
+}
+/* pop up css  */
+#popup{
+    padding: 10px 15px;    
 }
 
 @media(max-width: 575px) {
