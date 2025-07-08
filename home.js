@@ -107,6 +107,19 @@ $(document).ready(function () {
         }
     });
 
+
+    // Tabs
+    $("#mainTabs").kendoTabStrip({
+        animation: { open: { effects: "fadeIn" } }
+    });
+
+    //FAQ
+
+    $("#faqAccordion").kendoPanelBar({
+        expandMode: "single"
+    });
+
+
     // Hide error message on input
     $("#emailInput").on("input", function () {
         $("#emailInputError").hide();

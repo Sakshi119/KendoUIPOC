@@ -106,6 +106,10 @@ section {
     border: none;
 }
 
+#faqAccordion > div {
+    display: none;
+}
+
 .search-bar-wrapper input {
     border-radius: 8px;
     border: 1px solid #d0d0f5;
