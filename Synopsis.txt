@@ -1,0 +1,109 @@
+KendoUI Land is a responsive, interactive front-end demo page showcasing powerful UI components using:
+
+Kendo UI Core (open-source version)
+
+jQuery
+
+Swiper.js (for carousels/sliders)
+
+HTML5 + CSS3
+
+It demonstrates common modern UI elements including:
+
+Sticky navigation with smooth scroll and dark mode toggle
+
+Full-width hero slider using ScrollView
+
+Section search using Kendo TextBox
+
+Feature components like Charts, Data Grids, Calendars, and Forms
+
+Swiper-powered Card Slider Carousel
+
+Accessible Subscribe form
+
+Full Reach Out form with validation
+
+Tabs for content switching
+
+Accordion (FAQ) for collapsible Q&A
+
+Custom mobile navigation using hamburger + Kendo Drawer
+
+
+
+
+| Tool              | Purpose                                 |
+| ----------------- | --------------------------------------- |
+| **Kendo UI Core** | UI components (Grid, Chart, DatePicker) |
+| **Swiper.js**     | Carousel/Slider functionality           |
+| **jQuery**        | DOM manipulation and Kendo binding      |
+| **HTML/CSS**      | Structure and design                    |
+
+
+
+1. Include Dependencies
+
+<!-- Kendo UI Core -->
+<link href="https://kendo.cdn.telerik.com/themes/11.0.2/default/default-main.css" rel="stylesheet" />
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://kendo.cdn.telerik.com/2024.1.319/js/kendo.all.min.js"></script>
+
+<!-- Swiper Carousel -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+2. Initialize Components
+
+// Swiper Carousel
+const swiper = new Swiper(".cards-swiper", {
+  slidesPerView: 3,
+  spaceBetween: 20,
+  loop: true,
+  breakpoints: {
+    768: { slidesPerView: 2 },
+    480: { slidesPerView: 1 },
+  },
+});
+
+// Kendo UI DatePicker
+$("#featureDate").kendoDatePicker();
+
+// Kendo UI Grid
+$("#featureGrid").kendoGrid({
+  dataSource: {
+    data: [{ Name: "Kendo", Age: 10 }, { Name: "UI", Age: 5 }],
+    pageSize: 5,
+  },
+  pageable: true,
+  sortable: true,
+  columns: ["Name", "Age"]
+});
+
+
+
+
+⚠️ Known Issues
+Accordion & Tabs: May glitch if script order is incorrect or reused with the same IDs.
+
+Swiper Cards Carousel: Ensure Swiper’s JS and CSS load after DOM is ready.
+
+Theme Toggle: May not persist across reloads unless saved via localStorage.
+
+Kendo Components: Some components like Grid, DatePicker may break without proper Kendo structure or if jQuery conflicts.
+
+
+
+
+📜 Licensing Notes
+Kendo UI Core is open-source (Apache License 2.0):
+https://github.com/telerik/kendo-ui-core
+
+Swiper.js is open-source under MIT License:
+https://swiperjs.com/
+
+This project is built using free and open-source components only.
+
+Commercial features of Kendo UI Pro are not used here.
+
