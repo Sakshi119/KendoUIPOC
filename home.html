@@ -18,6 +18,7 @@
 </head>
 
 <body>
+
     <!-- HERO -->
     <nav class="main-nav">
         <div class="logo">
@@ -27,47 +28,54 @@
 
         <div class="navLinks">
             <ul>
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#product">Product</a></li>
-            <li><a href="#subscribe">Subscribe</a></li>
-            <li class="dropdown">
-                <a href="#">More ▾</a>
-                <div class="mega-menu">
-                    <div>
-                        <h4>Components</h4>
-                        <ul>
-                            <li><a href="#features">Grid</a></li>
-                            <li><a href="#features">Chart</a></li>
-                            <li><a href="#features">Calendar</a></li>
-                        </ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#product">Product</a></li>
+                <li><a href="#subscribe">Subscribe</a></li>
+                <li class="dropdown">
+                    <a href="#">More ▾</a>
+                    <div class="mega-menu">
+                        <div>
+                            <h4>Components</h4>
+                            <ul>
+                                <li><a href="#features">Grid</a></li>
+                                <li><a href="#features">Chart</a></li>
+                                <li><a href="#features">Calendar</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>Pages</h4>
+                            <ul>
+                                <li><a href="#product">Product</a></li>
+                                <li><a href="#subscribe">Subscribe</a></li>
+                            </ul>
+                        </div>
                     </div>
-                    <div>
-                        <h4>Pages</h4>
-                        <ul>
-                            <li><a href="#product">Product</a></li>
-                            <li><a href="#subscribe">Subscribe</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </li>
-            <li><button id="themeToggle" class="k-button k-flat toggle-btn">🌙</button></li>
-        </ul>
+                </li>
+                <li><button id="themeToggle" class="k-button k-flat toggle-btn">🌙</button></li>
+            </ul>
         </div>
-        
+
 
         <div class="ham-menu">
-                        <span></span>
-                        <span></span>
-                        <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
 
-                    </div>
+        </div>
     </nav>
     <header id="hero">
         <h1>Welcome to KendoUI Land 🌐</h1>
         <p>Fast, elegant, responsive UI — built with jQuery and Kendo UI</p>
         <button id="heroBtn" class="k-button k-primary hero-button">Get Started</button>
     </header>
+
+    <!-- Search -->
+
+    <section class="search-bar-wrapper" style="padding: 24px 0 0 0; text-align: center;">
+        <input id="sectionSearch" class="k-textbox" placeholder="Search sections..."/>
+        <span class="k-input-icon k-icon k-i-search"></span>    
+    </section>
 
     <!-- FEATURES -->
     <section id="features">
@@ -250,15 +258,56 @@
         <div class="subscribe">
             <h2>Stay in the Loop</h2>
             <p>Subscribe for updates, tips, and tutorials.</p>
-            <input id="emailInput" />
-            <button id="subscribeBtn" class="k-button k-primary">Subscribe</button>
+            <div class="subscribe-input">
+                <input id="emailInput" />
+                <button id="subscribeBtn" class="k-button k-primary">Subscribe</button>
+            </div>
         </div>
+    </section>
+
+
+    <!-- REACH OUT FORM -->
+    <section id="reachout">
+        <h2>Reach Out</h2>
+        <form id="reachoutForm" novalidate>
+            <div class="form-field">
+                <label for="roName">Name</label>
+                <input id="roName" name="name" />
+                <span class="k-invalid-msg" data-for="roName"></span>
+            </div>
+            <div class="form-field">
+                <label for="roEmail">Email <span>*</span></label>
+                <input id="roEmail" name="email" />
+                <span class="k-invalid-msg" data-for="roEmail"></span>
+            </div>
+            <div class="form-field">
+                <label for="roMobile">Mobile Number <span>*</span></label>
+                <input id="roMobile" name="mobile" />
+                <span class="k-invalid-msg" data-for="roMobile"></span>
+            </div>
+            <div class="form-field">
+                <label for="roBirthdate">Birthdate</label>
+                <input id="roBirthdate" name="birthdate" />
+                <span class="k-invalid-msg" data-for="roBirthdate"></span>
+            </div>
+            <div class="form-field">
+                <label>Gender</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="gender" value="Male" checked> Male</label>
+                    <label><input type="radio" name="gender" value="Female"> Female</label>
+                    <label><input type="radio" name="gender" value="Other"> Other</label>
+                </div>
+            </div>
+            <button id="roSubmit" class="k-button k-primary" type="submit">Submit</button>
+        </form>
     </section>
 
     <!-- FOOTER -->
     <footer id="footer">
         &copy; 2025 KendoUI Land. All rights reserved.
     </footer>
+
+
 
     <script type="text/javascript" src="home.js"></script>
 </body>

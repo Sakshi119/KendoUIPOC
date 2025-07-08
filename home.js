@@ -4,6 +4,10 @@ $(document).ready(function () {
         themeColor: "primary"
     });
 
+    $("#roSubmit").kendoButton({
+        themeColor: "primary"
+    });
+
     // child Button
     $("#childBtn").kendoButton({
         themeColor: "secondary"
@@ -15,18 +19,97 @@ $(document).ready(function () {
         width: "300px"
     });
 
+    // Add error message span below #emailInput if not present
+    if ($("#emailInputError").length === 0) {
+        $(".subscribe-input").after('<span id="emailInputError" class="error" style="color:#d32f2f;display:none;font-size:13px;"></span>');
+    }
+
+    // Section Search/Filter
+    $("#sectionSearch").kendoTextBox({
+        placeholder: "Search sections..."
+    });
+
+    // Section Search/Filter with Autocomplete
+    var sectionNames = [
+        "Home",
+        "Features",
+        "Product",
+        "Subscribe",
+        "Reach Out"
+    ];
+    var sectionIds = [
+        { name: "Home", id: "hero" },
+        { name: "Features", id: "features" },
+        { name: "Product", id: "product" },
+        { name: "Subscribe", id: "subscribe" },
+        { name: "Reach Out", id: "reachout" }
+    ];
+
+    $("#sectionSearch").kendoAutoComplete({
+        dataSource: sectionNames,
+        filter: "startswith",
+        placeholder: "Search sections...",
+        highlightFirst: true,
+        select: function (e) {
+            var value = this.dataItem(e.item.index());
+            var match = sectionIds.find(s => s.name === value);
+            if (match) {
+                // Scroll to the section if exists
+                $("html, body").animate({
+                    scrollTop: $("#" + match.id).offset().top - 60
+                }, 400);
+            }
+        }
+    });
+
+    $("#sectionSearch").on("input", function () {
+        const val = $(this).val().toLowerCase();
+        let anyVisible = false;
+        sectionIds.forEach(sec => {
+            const $sec = $("#" + sec.id);
+            if (!val || sec.name.toLowerCase().includes(val)) {
+                $sec.show();
+                anyVisible = true;
+            } else {
+                $sec.hide();
+            }
+        });
+        if (!anyVisible) {
+            if ($("#noSectionMsg").length === 0) {
+                $("<div id='noSectionMsg' style='text-align:center;color:#d32f2f;font-size:18px;margin:40px;'>No matching section found.</div>").insertAfter(".search-bar-wrapper,.main-nav");
+            }
+        } else {
+            $("#noSectionMsg").remove();
+        }
+    });
+
+
     // Subscribe Button
     $("#subscribeBtn").kendoButton({
         themeColor: "primary",
         icon: "check",
         click: function () {
             const email = $("#emailInput").val();
-            if (email) {
-                alert("Subscribed with: " + email);
+            const $error = $("#emailInputError");
+            const emailValid = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email);
+
+            if (!email) {
+                $error.text("Please enter your email.").show();
+            } else if (!emailValid) {
+                $error.text("Please enter a valid email address.").show();
             } else {
-                alert("Please enter your email.");
+                $error.hide();
+                // You can add your subscribe logic here
+                // For demo, clear the field
+                $("#emailInput").val("");
+                $("#emailInput").data("kendoTextBox").value("");
             }
         }
+    });
+
+    // Hide error message on input
+    $("#emailInput").on("input", function () {
+        $("#emailInputError").hide();
     });
 
 
@@ -148,5 +231,67 @@ $(document).ready(function () {
             $('body').css('overflow', 'auto');
         }
     });
+
+
+    // --- Reach Out Form Kendo UI widgets ---
+
+    $("#roName").kendoTextBox({
+        themeColor: "primary",
+    });
+    $("#roEmail").kendoTextBox({
+        placeholder: "Enter your email"
+    });
+    $("#roMobile").kendoMaskedTextBox({
+        mask: "00000-00000",
+        placeholder: "Enter mobile number"
+    });
+    $("#roBirthdate").kendoDatePicker({
+        format: "dd MMM yyyy",
+        min: new Date()
+    });
+
+    // Kendo Validator for the form
+    var validator = $("#reachoutForm").kendoValidator({
+        rules: {
+            email: function (input) {
+                if (input.is("[name='email']")) {
+                    return /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/.test(input.val());
+                }
+                return true;
+            },
+            mobile: function (input) {
+                if (input.is("[name='mobile']")) {
+                    return /^\d{5}-\d{5}$/.test(input.val());
+                }
+                return true;
+            }
+        },
+        messages: {
+            required: "This field is required",
+            email: "Please enter a valid email address",
+            mobile: "Enter a valid 10-digit mobile number (e.g. 98765-43210)"
+        }
+    }).data("kendoValidator");
+
+    // Form submit handler
+    $("#reachoutForm").on("submit", function (e) {
+        e.preventDefault();
+        if (validator.validate()) {
+            const name = $("#roName").val();
+            const email = $("#roEmail").val();
+            const mobile = $("#roMobile").val();
+            const birthdate = $("#roBirthdate").val();
+            const gender = $("input[name='gender']:checked").val();
+            alert(`Thank you, ${name}!\nEmail: ${email}\nMobile: ${mobile}\nBirthdate: ${birthdate}\nGender: ${gender}`);
+            this.reset();
+            // Optionally, reset Kendo widgets:
+            $("#roName").data("kendoTextBox").value("");
+            $("#roEmail").data("kendoTextBox").value("");
+            $("#roMobile").data("kendoMaskedTextBox").value("");
+            $("#roBirthdate").data("kendoDatePicker").value(null);
+            $("input[name='gender'][value='Male']").prop("checked", true);
+        }
+    });
+
 
 });

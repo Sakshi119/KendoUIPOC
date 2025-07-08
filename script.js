@@ -62,7 +62,8 @@ $(document).ready(function () {
   // Kendo DatePicker
   $("#datePicker").kendoDatePicker({
     format: "dd MMM yyyy",
-    value: new Date()
+    value: new Date(),
+    min : new Date()
   });
 
   // Kendo Radial Gauge
