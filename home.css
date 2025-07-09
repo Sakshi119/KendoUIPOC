@@ -584,6 +584,14 @@ form#reachoutForm {
     color: #ff6358;
 }
 
+.grid-scroll-wrapper {
+    overflow-x: auto;
+    /* -webkit-overflow-scrolling: touch; */
+}
+
+#kendoGridDemo {
+    min-width: 700px; 
+}
 
 
 
