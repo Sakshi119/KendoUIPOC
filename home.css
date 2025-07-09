@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
@@ -35,7 +36,7 @@ header {
 .toggle-btn {
     border: none;
     font-size: 30px;
-    margin-top:0 !important;
+    margin-top: 0 !important;
 }
 
 .card,
@@ -53,14 +54,14 @@ header h1 {
     font-size: 3em;
     margin-bottom: 10px;
     color: #fff;
-    
+
 }
 
 header p {
     font-size: 1.2em;
     margin-bottom: 30px;
     color: #fff;
-    
+
 }
 
 .hero-button {
@@ -73,7 +74,7 @@ section {
     margin: auto;
 }
 
-h2{
+h2 {
     font-size: 28px;
 }
 
@@ -107,7 +108,7 @@ h2{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-     flex-direction: row;
+    flex-direction: row;
     gap: 30px;
     overflow: hidden;
 }
@@ -117,13 +118,38 @@ h2{
     border-radius: 10px;
 }
 
+/* chart */
+
+.chart-demo-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+.chart-box {
+    flex: 1 1 300px;
+    padding: 16px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    background: #fafafa;
+}
+
+.chart {
+    height: 280px;
+    width: 100%;
+}
+
 /* search */
 .search-bar-wrapper input {
     width: 100% !important;
     border: none;
 }
 
-#faqAccordion > div {
+#faqAccordion>div {
     display: none;
 }
 
@@ -132,6 +158,15 @@ h2{
     border: 1px solid #d0d0f5;
     max-width: 100% !important;
     background: #e9ebff;
+}
+
+.search-bar-wrapper {
+    padding: 40px 0 20px;
+}
+
+.k-autocomplete {
+    width: 280px;
+    margin: auto;
 }
 
 .subscribe {
@@ -208,7 +243,7 @@ footer {
     padding: 8px 12px;
     border-radius: 6px;
     transition: background 0.2s;
-    
+
 }
 
 .main-nav a:hover {
@@ -377,9 +412,10 @@ footer {
 }
 
 
-.swiper-section{
+.swiper-section {
     width: 100%;
 }
+
 /* .cards-swiper{
     overflow: visible !important;
 } */
@@ -442,7 +478,8 @@ footer {
 .k-scrollview-wrap {
     width: 100%;
 }
-.scrollView-vertical{
+
+.scrollView-vertical {
     display: flex !important;
     width: 300vw;
     transition: transform 1s ease-in-out !important;
@@ -450,21 +487,24 @@ footer {
 
 
 /* css edited by pankaj */
-.k-button{
+.k-button {
     margin-top: 5px;
 }
 
 /* reachout */
-[data-theme='dark'] #reachout{
+[data-theme='dark'] #reachout {
     background-color: #121212;
 }
+
 [data-theme='dark'] #reachout h2,
-[data-theme='dark'] #reachout label{
+[data-theme='dark'] #reachout label {
     color: var(--text);
 }
-[data-theme='dark'] #reachout .radio-group label{
+
+[data-theme='dark'] #reachout .radio-group label {
     color: var(--text);
 }
+
 #reachout {
     max-width: 100%;
     background-color: #e9ebff;
@@ -530,15 +570,17 @@ form#reachoutForm {
 .form-field label span {
     color: red;
 }
+
 /* pop up css  */
-#popup{
-    padding: 10px 15px;    
+#popup {
+    padding: 10px 15px;
 }
 
-[data-theme='dark'] .k-tabstrip-items .k-link{
+[data-theme='dark'] .k-tabstrip-items .k-link {
     color: #fff;
 }
-[data-theme='dark'] .k-tabstrip-top > .k-tabstrip-items-wrapper .k-item.k-active .k-link {
+
+[data-theme='dark'] .k-tabstrip-top>.k-tabstrip-items-wrapper .k-item.k-active .k-link {
     color: #ff6358;
 }
 
@@ -619,13 +661,16 @@ form#reachoutForm {
     .product-preview img {
         width: 100%;
     }
-    header h1{
+
+    header h1 {
         font-size: 25px;
     }
-    header p{
+
+    header p {
         font-size: 12px;
     }
-    .product-preview .product-info{
+
+    .product-preview .product-info {
         width: 100%;
     }
 
@@ -714,10 +759,12 @@ form#reachoutForm {
     .product-preview img {
         width: 100%;
     }
-      header h1{
+
+    header h1 {
         font-size: 25px;
     }
-    header p{
+
+    header p {
         font-size: 14px;
     }
      .mega-menu {
@@ -735,13 +782,16 @@ form#reachoutForm {
     .k-card {
         width: 100%;
     }
-    .main-nav a{
+
+    .main-nav a {
         font-size: 16px;
     }
-      header h1{
+
+    header h1 {
         font-size: 30px;
     }
-    header p{
+
+    header p {
         font-size: 16px;
     }
 }

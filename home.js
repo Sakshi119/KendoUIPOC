@@ -11,47 +11,145 @@ $(document).ready(function () {
     }
 
     // ------------------- Section Search -------------------
-    const sectionNames = ["Home", "Features", "Product", "Subscribe", "Reach Out"];
-    const sectionIds = [
-        { name: "Home", id: "hero" },
-        { name: "Features", id: "features" },
-        { name: "Product", id: "product" },
-        { name: "Subscribe", id: "subscribe" },
-        { name: "Reach Out", id: "reachout" }
+    // Dummy JSON data
+    const dummyData = [
+        { title: "Dashboard UI" },
+        { title: "Charts & Graphs" },
+        { title: "User Settings" },
+        { title: "Subscription Panel" },
+        { title: "Notifications" },
+        { title: "Analytics Overview" },
+        { title: "FAQ Support" },
+        { title: "Kendo Components" }
     ];
 
-    $("#sectionSearch").kendoTextBox({ placeholder: "Search sections..." });
+    // Convert to array of strings
+    const dummyTitles = dummyData.map(item => item.title);
+
+    // Init Kendo TextBox
+    $("#sectionSearch").kendoTextBox({
+        placeholder: "Search from dummy data..."
+    });
+
+    // Init Kendo AutoComplete using dummy data
     $("#sectionSearch").kendoAutoComplete({
-        dataSource: sectionNames,
-        filter: "startswith",
+        dataSource: dummyTitles,
+        filter: "contains",
+        minLength: 1,
         highlightFirst: true,
+        separator: ", ",
+        placeholder: "Search from dummy data...",
         select: function (e) {
             const value = this.dataItem(e.item.index());
-            const match = sectionIds.find(s => s.name === value);
-            if (match) {
-                $("html, body").animate({ scrollTop: $("#" + match.id).offset().top - 60 }, 400);
+            if (value) {
+                alert("You selected: " + value); // replace with console.log or toast
             }
         }
     });
 
-    $("#sectionSearch").on("input", function () {
-        const val = $(this).val().toLowerCase();
-        let anyVisible = false;
-        sectionIds.forEach(sec => {
-            const $sec = $("#" + sec.id);
-            if (!val || sec.name.toLowerCase().includes(val)) {
-                $sec.show();
-                anyVisible = true;
-            } else {
-                $sec.hide();
-            }
-        });
-        if (!anyVisible && $("#noSectionMsg").length === 0) {
-            $("<div id='noSectionMsg' style='text-align:center;color:#d32f2f;font-size:18px;margin:40px;'>No matching section found.</div>").insertAfter(".search-bar-wrapper,.main-nav");
-        } else {
-            $("#noSectionMsg").remove();
+
+    // ------------------- Charts -------------------
+    // Column Chart
+    $("#columnChart").kendoChart({
+        title: {
+            text: "Monthly Visitors"
+        },
+        legend: {
+            visible: false
+        },
+        series: [{
+            name: "Visitors",
+            data: [120, 90, 150, 180, 200, 170],
+            type: "column"
+        }],
+        categoryAxis: {
+            categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"]
         }
     });
+
+    // Pie Chart
+    $("#pieChart").kendoChart({
+        title: {
+            text: "Traffic Sources"
+        },
+        legend: {
+            position: "bottom"
+        },
+        series: [{
+            type: "pie",
+            data: [
+                { category: "Organic", value: 45 },
+                { category: "Referral", value: 25 },
+                { category: "Social", value: 20 },
+                { category: "Email", value: 10 }
+            ]
+        }]
+    });
+
+    //------------------- line chart -------------------
+    $("#lineChart").kendoChart({
+        title: {
+            text: "User Growth"
+        },
+        series: [{
+            name: "Users",
+            data: [50, 70, 90, 110, 130, 160],
+            type: "line"
+        }],
+        categoryAxis: {
+            categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"]
+        }
+    });
+
+    // ------------------- table -------------------
+    const sampleData = [
+        { ID: 1, Name: "Alice", Age: 28, Role: "Developer", Joined: new Date(2021, 3, 10) },
+        { ID: 2, Name: "Bob", Age: 35, Role: "Designer", Joined: new Date(2020, 10, 22) },
+        { ID: 3, Name: "Charlie", Age: 42, Role: "Manager", Joined: new Date(2019, 6, 15) },
+        { ID: 4, Name: "Dana", Age: 25, Role: "Intern", Joined: new Date(2023, 1, 5) },
+        { ID: 5, Name: "Evan", Age: 30, Role: "QA", Joined: new Date(2022, 8, 1) }
+    ];
+
+    $("#kendoGridDemo").kendoGrid({
+        dataSource: {
+            data: sampleData,
+            schema: {
+                model: {
+                    id: "ID",
+                    fields: {
+                        ID: { editable: false, nullable: true },
+                        Name: { validation: { required: true } },
+                        Age: { type: "number", validation: { min: 18, required: true } },
+                        Role: { type: "string" },
+                        Joined: { type: "date" }
+                    }
+                }
+            },
+            pageSize: 5
+        },
+        height: 400,
+        sortable: true,
+        filterable: true,
+        editable: "inline",
+        pageable: {
+            refresh: true,
+            pageSizes: true,
+            buttonCount: 5
+        },
+        resizable: true,
+        reorderable: true,
+        columnMenu: true,
+        toolbar: ["create"],
+        columns: [
+            { field: "ID", title: "ID", width: "60px" },
+            { field: "Name", title: "Name" },
+            { field: "Age", title: "Age", width: "80px" },
+            { field: "Role", title: "Role" },
+            { field: "Joined", title: "Joined On", format: "{0:MM/dd/yyyy}" },
+            { command: ["edit", "destroy"], title: "Actions", width: "200px" }
+        ]
+    });
+
 
     // ------------------- Subscribe -------------------
     $("#subscribeBtn").kendoButton({
@@ -123,7 +221,7 @@ $(document).ready(function () {
         const isDark = $("body").attr("data-theme") === "dark";
         $("body").attr("data-theme", isDark ? "light" : "dark");
         $(this).text(isDark ? "🌙" : "☀️");
-        
+
     });
 
     // ------------------- Smooth Scroll & Scroll Spy -------------------
