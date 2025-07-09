@@ -445,7 +445,7 @@ footer {
     height: 100%;
     background: #eef1f5;
     display: flex;
-      flex-shrink: 0;
+    flex-shrink: 0;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -458,7 +458,7 @@ footer {
 
 }
 
-.slide2{
+.slide2 {
     background: url('slide2-Bg.jpg');
     background-repeat: no-repeat;
     background-position: center;
@@ -467,7 +467,7 @@ footer {
     /* background-color: #3f51b5; */
 }
 
-.slide3{
+.slide3 {
     background: url('slide3-Bg.jpg');
     background-repeat: no-repeat;
     background-position: center;
@@ -475,6 +475,7 @@ footer {
     background-attachment: fixed;
     /* background-color: #3f51b5; */
 }
+
 .k-scrollview-wrap {
     width: 100%;
 }
@@ -590,7 +591,7 @@ form#reachoutForm {
 }
 
 #kendoGridDemo {
-    min-width: 700px; 
+    min-width: 700px;
 }
 
 
@@ -640,7 +641,8 @@ form#reachoutForm {
         justify-content: center;
         align-items: flex-start;
     }
-    .mega-menu div li a{
+
+    .mega-menu div li a {
         color: #000 !important;
     }
 
@@ -674,24 +676,29 @@ form#reachoutForm {
         font-size: 18px;
     }
 
-    section{
-        padding:10px !important;
+    section {
+        padding: 10px !important;
     }
 
     header p {
         font-size: 12px;
+        white-space: normal;
+        word-wrap: break-word;
+        max-width: 80%;
+        margin-bottom: 20px;
+        text-align: center;
     }
 
     .product-preview .product-info {
         width: 100%;
     }
 
-     .mega-menu {
+    .mega-menu {
         left: 50%;
         right: auto;
         transform: translateX(-50%);
-        min-width: 90vw; 
-        
+        min-width: 90vw;
+
     }
 
 
@@ -746,7 +753,8 @@ form#reachoutForm {
     .main-nav {
         position: relative;
     }
-     .mega-menu div li a{
+
+    .mega-menu div li a {
         color: #000 !important;
     }
 
@@ -779,12 +787,13 @@ form#reachoutForm {
     header p {
         font-size: 14px;
     }
-     .mega-menu {
+
+    .mega-menu {
         left: 50%;
         right: auto;
         transform: translateX(-50%);
-        min-width: 90vw; 
-       
+        min-width: 90vw;
+
     }
 
 
